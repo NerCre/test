@@ -1052,7 +1052,7 @@ function onJudge(shouldSave) {
     </select>
   </label>
 
-  <label id="tae-wrap" ${showTae ? "" : "hidden"}>耐え値（自動）
+  <label id="tae-wrap" ${showTae ? "" : "hidden"}>耐え値
     <input id="tae-value" type="number" inputmode="decimal" step="0.1" value="${taeDisp}" readonly>
   </label>
   <p id="tae-note" class="muted small" ${showTae ? "" : "hidden"}>
@@ -1064,9 +1064,9 @@ function onJudge(shouldSave) {
     </label>
 
   <div>
-      <strong>損益（自動計算）</strong>
+      <strong>損益</strong>
       <div id="exitProfitDisp" class="profit-pill">${formatYen(r.profit)}</div>
-      <p class="muted small">計算: ((±(決済-エントリー)×倍率（銘柄）) - 手数料)×枚数</p>
+      <p class="muted small">※ ( ( ±(決済-エントリー) × 倍率(銘柄) ) - 手数料 ) × 枚数</p>
     </div>
 `;
 
