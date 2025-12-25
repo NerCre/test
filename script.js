@@ -1056,7 +1056,7 @@ function onJudge(shouldSave) {
     <input id="tae-value" type="number" inputmode="decimal" step="0.1" value="${taeDisp}" readonly>
   </label>
   <p id="tae-note" class="muted small" ${showTae ? "" : "hidden"}>
-    ※ 損益がマイナス かつ「決裁後の相場＝トレンド継続」のときだけ表示。計算: ロング=決済価格-直近安値 / ショート=直近高値-決済価格
+    ※ ロング=決済価格-直近安値 / ショート=直近高値-決済価格
   </p>
 
   <label>メモ
