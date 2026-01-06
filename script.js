@@ -58,7 +58,7 @@
     rrMin: 1.0,              // RR_MIN
     rrAllowMissing: false,  // TP/SL未入力（RR不明）をゲート対象外にする（既定OFF）
     dataTradeTypes: ["real", "virtual", "practice"],
-    dataCompletionStatuses: ["完全完成"]});
+    dataCompletionStatuses: ["完全完成", "未入力あり完成"]});
 
 
   const MASTER_TRADE_TYPES = Object.freeze(["real", "virtual", "practice"]);
@@ -104,12 +104,12 @@
       // If stored value matches the old broad defaults, tighten to the safer defaults.
       const _dt = Array.isArray(obj.dataTradeTypes) ? obj.dataTradeTypes.map((x) => String(x)) : null;
       if (_dt && _dt.length === MASTER_TRADE_TYPES.length && MASTER_TRADE_TYPES.every((t) => _dt.includes(t))) {
-        obj.dataTradeTypes = ["real"];
+        obj.dataTradeTypes = ["real", "virtual", "practice"];
       }
       const _cs = Array.isArray(obj.dataCompletionStatuses) ? obj.dataCompletionStatuses.map((x) => String(x)) : null;
       const _oldCs = ["完全完成", "未入力あり完成"];
       if (_cs && _cs.length === _oldCs.length && _oldCs.every((s) => _cs.includes(s))) {
-        obj.dataCompletionStatuses = ["完全完成"];
+        obj.dataCompletionStatuses = ["完全完成", "未入力あり完成"];
       }
 
       // Coerce numbers if present
