@@ -57,7 +57,7 @@
     rrGateEnabled: true,     // RR gate strict（RRが下限未満なら原則ノーポジ）
     rrMin: 1.0,              // RR_MIN
     rrAllowMissing: false,  // TP/SL未入力（RR不明）をゲート対象外にする（既定OFF）
-    dataTradeTypes: ["real"],
+    dataTradeTypes: ["real", "virtual", "practice"],
     dataCompletionStatuses: ["完全完成"]});
 
 
