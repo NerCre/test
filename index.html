@@ -185,7 +185,7 @@
           </label>
 
           <label>RR（Risk-Reward）
-            <input id="entry-rr" type="number" inputmode="decimal" step="0.01" readonly>
+            <input id="entry-rr" type="number" inputmode="decimal" step="0.01" placeholder="（TP/SLから自動入力）"  readonly>
           </label>
         </div>
 
@@ -355,7 +355,7 @@
           </label>
 
           
-                    <label>決め手となったインジケーター
+          <label>決め手となったインジケーター <span class="req">必須</span>
             <select id="entry-decisiveIndicator">
               <option value="" selected>（未選択）</option>
             </select>
@@ -363,7 +363,6 @@
           <label>決め手サイン <span class="muted">（自動）</span>
             <input id="entry-decisiveSignal" type="text" placeholder="（決め手インジを選ぶと自動表示）" readonly>
           </label>
-
           
           <label>相場状況メモ
             <textarea id="entry-marketMemo" rows="6" placeholder="相場状況・気づきなど"></textarea>
